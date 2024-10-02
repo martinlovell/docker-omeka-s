@@ -1,0 +1,120 @@
+<http://dbpedia.org/ontology/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://dbpedia.org/ontology/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/vocommons/voaf#Vocabulary> .
+<http://dbpedia.org/ontology/> <http://purl.org/vocab/vann/preferredNamespacePrefix> "dbo" .
+<http://dbpedia.org/ontology/> <http://purl.org/vocab/vann/preferredNamespaceUri> "http://dbpedia.org/ontology/" .
+<http://dbpedia.org/ontology/> <http://purl.org/dc/terms/title> "The DBpedia Ontology"@en .
+<http://dbpedia.org/ontology/> <http://purl.org/dc/terms/description> "\n              The DBpedia ontology provides the classes and properties used in the DBpedia data set.\n            "@en .
+<http://dbpedia.org/ontology/> <http://xmlns.com/foaf/0.1/homepage> <http://wiki.dbpedia.org/Ontology> .
+<http://dbpedia.org/ontology/> <http://purl.org/dc/terms/source> <http://mappings.dbpedia.org> .
+<http://dbpedia.org/ontology/> <http://purl.org/dc/terms/publisher> "DBpedia Maintainers" .
+<http://dbpedia.org/ontology/> <http://purl.org/dc/terms/creator> "DBpedia Maintainers and Contributors" .
+<http://dbpedia.org/ontology/> <http://purl.org/dc/terms/issued> "2008-11-17T12:00Z" .
+<http://dbpedia.org/ontology/> <http://purl.org/dc/terms/modified> "2017-01-16T16:04Z" .
+<http://dbpedia.org/ontology/> <http://www.w3.org/2002/07/owl#versionInfo> "4.2-SNAPSHOT"@en .
+<http://dbpedia.org/ontology/> <http://www.w3.org/2000/01/rdf-schema#comment> "\n              This ontology is generated from the manually created specifications in the DBpedia Mappings\n              Wiki. Each release of this ontology corresponds to a new release of the DBpedia data set which\n              contains instance data extracted from the different language versions of Wikipedia. For\n              information regarding changes in this ontology, please refer to the DBpedia Mappings Wiki.\n            "@en .
+<http://dbpedia.org/ontology/> <http://creativecommons.org/ns#license> <http://www.gnu.org/copyleft/fdl.html> .
+<http://dbpedia.org/ontology/> <http://creativecommons.org/ns#license> <http://creativecommons.org/licenses/by-sa/3.0/> .
+<http://dbpedia.org/ontology/EducationalInstitution> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://dbpedia.org/ontology/EducationalInstitution> <http://www.w3.org/2000/01/rdf-schema#label> "Bildungseinrichtung"@de .
+<http://dbpedia.org/ontology/EducationalInstitution> <http://www.w3.org/2000/01/rdf-schema#label> "Educational Institution"@en .
+<http://dbpedia.org/ontology/EducationalInstitution> <http://www.w3.org/2000/01/rdf-schema#label> "εκπαιδευτικό ίδρυμα"@el .
+<http://dbpedia.org/ontology/EducationalInstitution> <http://www.w3.org/2000/01/rdf-schema#label> "onderwijsinstelling"@nl .
+<http://dbpedia.org/ontology/EducationalInstitution> <http://www.w3.org/2000/01/rdf-schema#label> "교육 기관"@ko .
+<http://dbpedia.org/ontology/EducationalInstitution> <http://www.w3.org/2000/01/rdf-schema#label> "établissement d'enseignement"@fr .
+<http://dbpedia.org/ontology/EducationalInstitution> <http://www.w3.org/2000/01/rdf-schema#label> "institución educativa"@es .
+<http://dbpedia.org/ontology/EducationalInstitution> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://dbpedia.org/ontology/Organisation> .
+<http://dbpedia.org/ontology/EducationalInstitution> <http://www.w3.org/2002/07/owl#equivalentClass> <http://schema.org/EducationalOrganization> .
+<http://dbpedia.org/ontology/EducationalInstitution> <http://www.w3.org/ns/prov#wasDerivedFrom> <http://mappings.dbpedia.org/index.php/OntologyClass:EducationalInstitution> .
+<http://dbpedia.org/ontology/employer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://dbpedia.org/ontology/employer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://dbpedia.org/ontology/employer> <http://www.w3.org/2000/01/rdf-schema#label> "Employer"@en .
+<http://dbpedia.org/ontology/employer> <http://www.w3.org/2000/01/rdf-schema#label> "Arbeitgeber"@de .
+<http://dbpedia.org/ontology/employer> <http://www.w3.org/2000/01/rdf-schema#label> "雇用者"@ja .
+<http://dbpedia.org/ontology/employer> <http://www.w3.org/2000/01/rdf-schema#label> "θέσεις_εργασίας"@el .
+<http://dbpedia.org/ontology/employer> <http://www.w3.org/2000/01/rdf-schema#domain> <http://dbpedia.org/ontology/Person> .
+<http://dbpedia.org/ontology/employer> <http://www.w3.org/2000/01/rdf-schema#range> <http://dbpedia.org/ontology/Organisation> .
+<http://dbpedia.org/ontology/employer> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://www.wikidata.org/entity/P108> .
+<http://dbpedia.org/ontology/employer> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isMemberOf> .
+<http://dbpedia.org/ontology/employer> <http://www.w3.org/ns/prov#wasDerivedFrom> <http://mappings.dbpedia.org/index.php/OntologyProperty:employer> .
+<http://dbpedia.org/ontology/Employer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://dbpedia.org/ontology/Employer> <http://www.w3.org/2000/01/rdf-schema#label> "Arbeitgeber"@de .
+<http://dbpedia.org/ontology/Employer> <http://www.w3.org/2000/01/rdf-schema#label> "Employer"@en .
+<http://dbpedia.org/ontology/Employer> <http://www.w3.org/2000/01/rdf-schema#label> "Εργοδότης"@el .
+<http://dbpedia.org/ontology/Employer> <http://www.w3.org/2000/01/rdf-schema#label> "雇用者"@ja .
+<http://dbpedia.org/ontology/Employer> <http://www.w3.org/2000/01/rdf-schema#label> "werkgever"@nl .
+<http://dbpedia.org/ontology/Employer> <http://www.w3.org/2000/01/rdf-schema#label> "Employeur"@fr .
+<http://dbpedia.org/ontology/Employer> <http://www.w3.org/2000/01/rdf-schema#label> "fostóir"@ga .
+<http://dbpedia.org/ontology/Employer> <http://www.w3.org/2000/01/rdf-schema#label> "Empleador"@es .
+<http://dbpedia.org/ontology/Employer> <http://www.w3.org/2000/01/rdf-schema#comment> "a person, business, firm, etc, that employs workers."@en .
+<http://dbpedia.org/ontology/Employer> <http://www.w3.org/2000/01/rdf-schema#comment> "Arbeitgeber ist, wer die Arbeitsleistung des Arbeitnehmers kraft Arbeitsvertrages fordern kann und das Arbeitsentgelt schuldet."@de .
+<http://dbpedia.org/ontology/Employer> <http://www.w3.org/2000/01/rdf-schema#comment> "άτομο, επιχείρηση, οργανισμός, κλπ που προσλαμβάνει εργαζόμενους."@el .
+<http://dbpedia.org/ontology/Employer> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://dbpedia.org/ontology/Agent> .
+<http://dbpedia.org/ontology/Employer> <http://www.w3.org/2002/07/owl#equivalentClass> <http://www.wikidata.org/entity/Q3053337> .
+<http://dbpedia.org/ontology/Employer> <http://www.w3.org/ns/prov#wasDerivedFrom> <http://mappings.dbpedia.org/index.php/OntologyClass:Employer> .
+<http://dbpedia.org/ontology/name> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://dbpedia.org/ontology/name> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://dbpedia.org/ontology/name> <http://www.w3.org/2000/01/rdf-schema#label> "Name"@en .
+<http://dbpedia.org/ontology/name> <http://www.w3.org/2000/01/rdf-schema#label> "Name"@de .
+<http://dbpedia.org/ontology/name> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/1999/02/22-rdf-syntax-ns#langString> .
+<http://dbpedia.org/ontology/name> <http://www.w3.org/ns/prov#wasDerivedFrom> <http://mappings.dbpedia.org/index.php/OntologyProperty:name> .
+<http://dbpedia.org/ontology/educationPlace> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://dbpedia.org/ontology/educationPlace> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://dbpedia.org/ontology/educationPlace> <http://www.w3.org/2000/01/rdf-schema#label> "Education Place"@en .
+<http://dbpedia.org/ontology/educationPlace> <http://www.w3.org/2000/01/rdf-schema#label> "Bildungsstätte"@de .
+<http://dbpedia.org/ontology/educationPlace> <http://www.w3.org/2000/01/rdf-schema#domain> <http://dbpedia.org/ontology/Person> .
+<http://dbpedia.org/ontology/educationPlace> <http://www.w3.org/2000/01/rdf-schema#range> <http://dbpedia.org/ontology/Place> .
+<http://dbpedia.org/ontology/educationPlace> <http://www.w3.org/ns/prov#wasDerivedFrom> <http://mappings.dbpedia.org/index.php/OntologyProperty:educationPlace> .
+<http://dbpedia.org/ontology/family> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://dbpedia.org/ontology/family> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://dbpedia.org/ontology/family> <http://www.w3.org/2000/01/rdf-schema#label> "familie"@de .
+<http://dbpedia.org/ontology/family> <http://www.w3.org/2000/01/rdf-schema#label> "Family"@en .
+<http://dbpedia.org/ontology/family> <http://www.w3.org/2000/01/rdf-schema#label> "οικογένεια"@el .
+<http://dbpedia.org/ontology/family> <http://www.w3.org/2000/01/rdf-schema#label> "科_(分類学)"@ja .
+<http://dbpedia.org/ontology/family> <http://www.w3.org/2000/01/rdf-schema#label> "familie"@nl .
+<http://dbpedia.org/ontology/family> <http://www.w3.org/2000/01/rdf-schema#label> "famille"@fr .
+<http://dbpedia.org/ontology/family> <http://www.w3.org/2000/01/rdf-schema#label> "rodzina"@pl .
+<http://dbpedia.org/ontology/family> <http://www.w3.org/2000/01/rdf-schema#domain> <http://dbpedia.org/ontology/Species> .
+<http://dbpedia.org/ontology/family> <http://www.w3.org/2000/01/rdf-schema#range> <http://dbpedia.org/ontology/Species> .
+<http://dbpedia.org/ontology/family> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://www.wikidata.org/entity/P71> .
+<http://dbpedia.org/ontology/family> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#specializes> .
+<http://dbpedia.org/ontology/family> <http://www.w3.org/ns/prov#wasDerivedFrom> <http://mappings.dbpedia.org/index.php/OntologyProperty:family> .
+<http://dbpedia.org/ontology/father> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://dbpedia.org/ontology/father> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://dbpedia.org/ontology/father> <http://www.w3.org/2000/01/rdf-schema#label> "Father"@en .
+<http://dbpedia.org/ontology/father> <http://www.w3.org/2000/01/rdf-schema#label> "Vater"@de .
+<http://dbpedia.org/ontology/father> <http://www.w3.org/2000/01/rdf-schema#domain> <http://dbpedia.org/ontology/Person> .
+<http://dbpedia.org/ontology/father> <http://www.w3.org/2000/01/rdf-schema#range> <http://dbpedia.org/ontology/Person> .
+<http://dbpedia.org/ontology/father> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://www.wikidata.org/entity/P22> .
+<http://dbpedia.org/ontology/father> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#sameSettingAs> .
+<http://dbpedia.org/ontology/father> <http://www.w3.org/ns/prov#wasDerivedFrom> <http://mappings.dbpedia.org/index.php/OntologyProperty:father> .
+<http://dbpedia.org/ontology/mother> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://dbpedia.org/ontology/mother> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://dbpedia.org/ontology/mother> <http://www.w3.org/2000/01/rdf-schema#label> "Mother"@en .
+<http://dbpedia.org/ontology/mother> <http://www.w3.org/2000/01/rdf-schema#label> "Mutter"@de .
+<http://dbpedia.org/ontology/mother> <http://www.w3.org/2000/01/rdf-schema#domain> <http://dbpedia.org/ontology/Person> .
+<http://dbpedia.org/ontology/mother> <http://www.w3.org/2000/01/rdf-schema#range> <http://dbpedia.org/ontology/Person> .
+<http://dbpedia.org/ontology/mother> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://www.wikidata.org/entity/P25> .
+<http://dbpedia.org/ontology/mother> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#sameSettingAs> .
+<http://dbpedia.org/ontology/mother> <http://www.w3.org/ns/prov#wasDerivedFrom> <http://mappings.dbpedia.org/index.php/OntologyProperty:mother> .
+<http://dbpedia.org/ontology/residence> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://dbpedia.org/ontology/residence> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://dbpedia.org/ontology/residence> <http://www.w3.org/2000/01/rdf-schema#label> "Residenz"@de .
+<http://dbpedia.org/ontology/residence> <http://www.w3.org/2000/01/rdf-schema#label> "Residence"@en .
+<http://dbpedia.org/ontology/residence> <http://www.w3.org/2000/01/rdf-schema#label> "κατοικία"@el .
+<http://dbpedia.org/ontology/residence> <http://www.w3.org/2000/01/rdf-schema#label> "居住地"@ja .
+<http://dbpedia.org/ontology/residence> <http://www.w3.org/2000/01/rdf-schema#label> "verblijfplaats"@nl .
+<http://dbpedia.org/ontology/residence> <http://www.w3.org/2000/01/rdf-schema#label> "miejsce zamieszkania"@pl .
+<http://dbpedia.org/ontology/residence> <http://www.w3.org/2000/01/rdf-schema#comment> "Place of residence of a person."@en .
+<http://dbpedia.org/ontology/residence> <http://www.w3.org/2000/01/rdf-schema#domain> <http://dbpedia.org/ontology/Person> .
+<http://dbpedia.org/ontology/residence> <http://www.w3.org/2000/01/rdf-schema#range> <http://dbpedia.org/ontology/Place> .
+<http://dbpedia.org/ontology/residence> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://www.wikidata.org/entity/P263> .
+<http://dbpedia.org/ontology/residence> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasLocation> .
+<http://dbpedia.org/ontology/residence> <http://www.w3.org/ns/prov#wasDerivedFrom> <http://mappings.dbpedia.org/index.php/OntologyProperty:residence> .
+<http://dbpedia.org/ontology/gender> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://dbpedia.org/ontology/gender> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://dbpedia.org/ontology/gender> <http://www.w3.org/2000/01/rdf-schema#label> "Gender"@en .
+<http://dbpedia.org/ontology/gender> <http://www.w3.org/2000/01/rdf-schema#label> "φύλο"@el .
+<http://dbpedia.org/ontology/gender> <http://www.w3.org/2000/01/rdf-schema#label> "Geschlecht"@de .
+<http://dbpedia.org/ontology/gender> <http://www.w3.org/2000/01/rdf-schema#label> "geslacht"@nl .
+<http://dbpedia.org/ontology/gender> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isClassifiedBy> .
+<http://dbpedia.org/ontology/gender> <http://www.w3.org/ns/prov#wasDerivedFrom> <http://mappings.dbpedia.org/index.php/OntologyProperty:gender> .

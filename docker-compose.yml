@@ -1,0 +1,35 @@
+version: '3'
+volumes:
+  mysql-db-data:
+
+
+services:
+  omeka-s:
+    image: omeka-s
+    stdin_open: true
+    tty: true
+    build:
+      dockerfile: Dockerfile
+      context: .
+    ports:
+      - 80:80
+    environment:
+      OMEKA_ADMIN_EMAIL: martin.lovell@yale.edu
+      OMEKA_ADMIN_NAME: Martin
+      OMEKA_ADMIN_PASSWORD: password
+
+
+  mysql:
+    image: mysql:8.1.0
+    command: [--default-authentication-plugin=mysql_native_password]
+    volumes:
+      - mysql-db-data:/var/lib/mysql
+      - ./db/docker-init:/docker-entrypoint-initdb.d
+    environment:
+       MYSQL_ROOT_PASSWORD: omeka-s
+       MYSQL_PASSWORD: omeka-s
+       MYSQL_DATABASE: omeka-s
+       MYSQL_USER: omeka-s
+
+    # ports:
+    #   - 3306:3306
