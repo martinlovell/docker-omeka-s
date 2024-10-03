@@ -48,8 +48,10 @@ RUN echo 'SetEnv APPLICATION_ENV "development"' >> /var/www/html/.htaccess
 COPY bootstrap.sh /usr/local/libexec/
 COPY bootstrap.d/*.php /usr/local/libexec/bootstrap.d/
 COPY docker-entrypoint.sh /usr/local/bin/
-COPY schema.rdf schema.rdf
+COPY schemaorg.rdf schemaorg.rdf
 COPY dbpedia.nt dbpedia.nt
+COPY schemaorg_full.rdf schemaorg_full.rdf
+COPY dbpedia_full.nt dbpedia_full.nt
 
 VOLUME ["/var/www/html/files", "/var/www/html/logs", "/var/www/html/config"]
 

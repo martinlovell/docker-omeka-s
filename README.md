@@ -15,7 +15,7 @@ docker down -v
 ```
 
 ## API Key
-There is an API key created during the first `docker compose up`. View the output to get the key and credential.
+There is an API key created during the first `docker compose up`. View the output to get the key and credential. (There is no way to get it after the initial `docker compose up`.)
 
 ## Initial User and password
 The initial admin user is configured in [docker-compose.yml](docker-compose.yml).

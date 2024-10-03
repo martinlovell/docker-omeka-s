@@ -44,7 +44,7 @@ class InstallExtraVocabulariesTask
                     'o:comment' => '',
                 ],
                 'strategy' => 'file',
-                'file' => '/var/www/html/dbpedia.nt',
+                'file' => '/var/www/html/dbpedia_full.nt',
                 'format' => 'guess',
                 'preferred_language' => 'en'
             ],
@@ -56,7 +56,7 @@ class InstallExtraVocabulariesTask
                     'o:comment' => '',
                 ],
                 'strategy' => 'file',
-                'file' => '/var/www/html/schema.rdf',
+                'file' => '/var/www/html/schemaorg_full.rdf',
                 'format' => 'guess',
                 'preferred_language' => 'en'
             ],

@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+  xmlns:schema="http://schema.org/"
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xmlns:owl="http://www.w3.org/2002/07/owl#"
+  xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+>
+
+<rdfs:Class rdf:about="http://schema.org/Place">
+  <rdfs:label>Place</rdfs:label>
+  <rdfs:subClassOf rdf:resource="http://schema.org/Thing"/>
+  <rdfs:comment>Entities that have a somewhat fixed, physical extension.</rdfs:comment>
+</rdfs:Class>
+<rdfs:Class rdf:about="http://schema.org/EducationalOrganization">
+  <rdfs:comment>An educational organization.</rdfs:comment>
+  <rdfs:label>EducationalOrganization</rdfs:label>
+  <rdfs:subClassOf rdf:resource="http://schema.org/CivicStructure"/>
+  <rdfs:subClassOf rdf:resource="http://schema.org/Organization"/>
+</rdfs:Class>
+<rdfs:Class rdf:about="http://schema.org/Person">
+  <owl:equivalentClass rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+  <rdfs:label>Person</rdfs:label>
+  <rdfs:comment>A person (alive, dead, undead, or fictional).</rdfs:comment>
+</rdfs:Class>
+<rdfs:Class rdf:about="http://schema.org/Organization">
+  <rdfs:subClassOf rdf:resource="http://schema.org/Thing"/>
+  <rdfs:comment>An organization such as a school, NGO, corporation, club, etc.</rdfs:comment>
+  <rdfs:label>Organization</rdfs:label>
+</rdfs:Class>
+<rdf:Property rdf:about="http://schema.org/sameAs">
+  <rdfs:comment>URL of a reference Web page that unambiguously indicates the item's identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or official website.</rdfs:comment>
+  <rdfs:label>Same As</rdfs:label>
+</rdf:Property>
+<rdf:Property rdf:about="http://schema.org/birthDate">
+  <rdfs:comment>Date of birth.</rdfs:comment>
+  <schema:rangeIncludes rdf:resource="http://schema.org/Date"/>
+  <rdfs:label>Birth Date</rdfs:label>
+  <schema:domainIncludes rdf:resource="http://schema.org/Person"/>
+</rdf:Property>
+<rdf:Property rdf:about="http://schema.org/deathDate">
+  <rdfs:comment>Date of death.</rdfs:comment>
+  <rdfs:label>Death Date</rdfs:label>
+  <schema:domainIncludes rdf:resource="http://schema.org/Person"/>
+</rdf:Property>
+<rdf:Property rdf:about="http://schema.org/birthPlace">
+  <rdfs:label>Birth Place</rdfs:label>
+  <schema:domainIncludes rdf:resource="http://schema.org/Person"/>
+  <rdfs:comment>The place where the person was born.</rdfs:comment>
+</rdf:Property>
+<rdf:Property rdf:about="http://schema.org/siblings">
+  <rdfs:label>Siblings</rdfs:label>
+  <schema:domainIncludes rdf:resource="http://schema.org/Person"/>
+  <rdfs:comment>A sibling of the person.</rdfs:comment>
+  <schema:supersededBy>
+    <rdf:Property rdf:about="http://schema.org/sibling">
+      <rdfs:label>Sibling</rdfs:label>
+      <schema:domainIncludes rdf:resource="http://schema.org/Person"/>
+      <rdfs:comment>A sibling of the person.</rdfs:comment>
+      <schema:rangeIncludes rdf:resource="http://schema.org/Person"/>
+    </rdf:Property>
+  </schema:supersededBy>
+  <schema:rangeIncludes rdf:resource="http://schema.org/Person"/>
+</rdf:Property>
+<rdf:Property rdf:about="http://schema.org/spouse">
+  <schema:domainIncludes rdf:resource="http://schema.org/Person"/>
+  <rdfs:comment>The person's spouse.</rdfs:comment>
+  <schema:rangeIncludes rdf:resource="http://schema.org/Person"/>
+  <rdfs:label>Spouse</rdfs:label>
+</rdf:Property>
+<rdf:Property rdf:about="http://schema.org/workLocation">
+  <rdfs:label>Work Location</rdfs:label>
+  <rdfs:comment>A contact location for a person's place of work.</rdfs:comment>
+  <schema:domainIncludes rdf:resource="http://schema.org/Person"/>
+</rdf:Property>
+<rdf:Property rdf:about="http://schema.org/alumni">
+  <schema:rangeIncludes rdf:resource="http://schema.org/Person"/>
+  <schema:domainIncludes rdf:resource="http://schema.org/EducationalOrganization"/>
+  <schema:domainIncludes rdf:resource="http://schema.org/Organization"/>
+  <rdfs:comment>Alumni of an organization.</rdfs:comment>
+  <rdfs:label>alumni</rdfs:label>
+  <schema:inverseOf>
+    <rdf:Property rdf:about="http://schema.org/alumniOf">
+      <schema:inverseOf rdf:resource="http://schema.org/alumni"/>
+      <schema:rangeIncludes rdf:resource="http://schema.org/EducationalOrganization"/>
+      <schema:rangeIncludes rdf:resource="http://schema.org/Organization"/>
+      <schema:domainIncludes rdf:resource="http://schema.org/Person"/>
+      <rdfs:label>alumniOf</rdfs:label>
+      <rdfs:comment>An organization that the person is an alumni of.</rdfs:comment>
+    </rdf:Property>
+  </schema:inverseOf>
+</rdf:Property>
+<rdf:Property rdf:about="http://schema.org/worksFor">
+  <schema:domainIncludes rdf:resource="http://schema.org/Person"/>
+  <schema:rangeIncludes rdf:resource="http://schema.org/Organization"/>
+  <rdfs:comment>Organizations that the person works for.</rdfs:comment>
+  <rdfs:label>worksFor</rdfs:label>
+</rdf:Property>
+<rdf:Property rdf:about="http://schema.org/memberOf">
+  <rdfs:comment>An Organization (or ProgramMembership) to which this Person or Organization belongs.</rdfs:comment>
+  <schema:domainIncludes rdf:resource="http://schema.org/Organization"/>
+  <schema:domainIncludes rdf:resource="http://schema.org/Person"/>
+  <schema:rangeIncludes rdf:resource="http://schema.org/MemberProgramTier"/>
+  <schema:rangeIncludes rdf:resource="http://schema.org/Organization"/>
+  <schema:rangeIncludes rdf:resource="http://schema.org/ProgramMembership"/>
+  <rdfs:label>memberOf</rdfs:label>
+  <schema:inverseOf rdf:resource="http://schema.org/member"/>
+</rdf:Property>
+<rdf:Property rdf:about="http://schema.org/parents">
+  <rdfs:comment>A parents of the person.</rdfs:comment>
+  <schema:domainIncludes rdf:resource="http://schema.org/Person"/>
+  <schema:supersededBy>
+    <rdf:Property rdf:about="http://schema.org/parent">
+      <rdfs:label>parent</rdfs:label>
+      <schema:domainIncludes rdf:resource="http://schema.org/Person"/>
+      <schema:rangeIncludes rdf:resource="http://schema.org/Person"/>
+      <rdfs:comment>A parent of this person.</rdfs:comment>
+    </rdf:Property>
+  </schema:supersededBy>
+  <rdfs:label>parents</rdfs:label>
+  <schema:rangeIncludes rdf:resource="http://schema.org/Person"/>
+</rdf:Property>
+<rdf:Property rdf:about="http://schema.org/gender">
+  <schema:rangeIncludes rdf:resource="http://schema.org/GenderType"/>
+  <schema:rangeIncludes rdf:resource="http://schema.org/Text"/>
+  <schema:domainIncludes rdf:resource="http://schema.org/Person"/>
+  <schema:domainIncludes rdf:resource="http://schema.org/SportsTeam"/>
+  <rdfs:label>gender</rdfs:label>
+  <schema:source rdf:resource="https://github.com/schemaorg/schemaorg/issues/2341"/>
+  <schema:isPartOf rdf:resource="http://pending.schema.org"/>
+  <rdfs:comment>Gender of something, typically a [[Person]], but possibly also fictional characters, animals, etc. While http://schema.org/Male and http://schema.org/Female may be used, text strings are also acceptable for people who do not identify as a binary gender. The [[gender]] property can also be used in an extended sense to cover e.g. the gender of sports teams. As with the gender of individuals, we do not try to enumerate all possibilities. A mixed-gender [[SportsTeam]] can be indicated with a text value of "Mixed".</rdfs:comment>
+</rdf:Property>
+<rdf:Property rdf:about="http://schema.org/name">
+  <schema:domainIncludes rdf:resource="http://schema.org/Thing"/>
+  <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+  <rdfs:comment>The name of the item.</rdfs:comment>
+  <rdfs:label>name</rdfs:label>
+  <owl:equivalentProperty rdf:resource="http://purl.org/dc/terms/title"/>
+  <schema:rangeIncludes rdf:resource="http://schema.org/Text"/>
+</rdf:Property>
+<rdf:Property rdf:about="http://schema.org/homeLocation">
+  <schema:rangeIncludes rdf:resource="http://schema.org/Place"/>
+  <schema:rangeIncludes rdf:resource="http://schema.org/ContactPoint"/>
+  <rdfs:comment>A contact location for a person's residence.</rdfs:comment>
+  <rdfs:subPropertyOf rdf:resource="http://schema.org/location"/>
+  <schema:domainIncludes rdf:resource="http://schema.org/Person"/>
+  <rdfs:label>homeLocation</rdfs:label>
+</rdf:Property>
+<rdf:Property rdf:about="http://schema.org/birthPlace">
+  <rdfs:label>birthPlace</rdfs:label>
+  <schema:domainIncludes rdf:resource="http://schema.org/Person"/>
+  <schema:rangeIncludes rdf:resource="http://schema.org/Place"/>
+  <rdfs:comment>The place where the person was born.</rdfs:comment>
+</rdf:Property>
+<rdf:Property rdf:about="http://schema.org/birthDate">
+  <rdfs:comment>Date of birth.</rdfs:comment>
+  <schema:rangeIncludes rdf:resource="http://schema.org/Date"/>
+  <rdfs:label>birthDate</rdfs:label>
+  <schema:domainIncludes rdf:resource="http://schema.org/Person"/>
+</rdf:Property>
+<rdf:Property rdf:about="http://schema.org/deathDate">
+  <rdfs:comment>Date of death.</rdfs:comment>
+  <rdfs:label>deathDate</rdfs:label>
+  <schema:domainIncludes rdf:resource="http://schema.org/Person"/>
+  <schema:rangeIncludes rdf:resource="http://schema.org/Date"/>
+</rdf:Property>
+<rdf:Property rdf:about="http://schema.org/siblings">
+  <rdfs:label>siblings</rdfs:label>
+  <schema:domainIncludes rdf:resource="http://schema.org/Person"/>
+  <rdfs:comment>A sibling of the person.</rdfs:comment>
+  <schema:supersededBy>
+    <rdf:Property rdf:about="http://schema.org/sibling">
+      <rdfs:label>sibling</rdfs:label>
+      <schema:domainIncludes rdf:resource="http://schema.org/Person"/>
+      <rdfs:comment>A sibling of the person.</rdfs:comment>
+      <schema:rangeIncludes rdf:resource="http://schema.org/Person"/>
+    </rdf:Property>
+  </schema:supersededBy>
+  <schema:rangeIncludes rdf:resource="http://schema.org/Person"/>
+</rdf:Property>
+<rdf:Property rdf:about="http://schema.org/spouse">
+  <schema:domainIncludes rdf:resource="http://schema.org/Person"/>
+  <rdfs:comment>The person's spouse.</rdfs:comment>
+  <schema:rangeIncludes rdf:resource="http://schema.org/Person"/>
+  <rdfs:label>spouse</rdfs:label>
+</rdf:Property>
+<rdf:Property rdf:about="http://schema.org/relatedTo">
+  <rdfs:comment>The most generic familial relation.</rdfs:comment>
+  <schema:domainIncludes rdf:resource="http://schema.org/Person"/>
+  <rdfs:label>relatedTo</rdfs:label>
+  <schema:rangeIncludes rdf:resource="http://schema.org/Person"/>
+</rdf:Property>
+</rdf:RDF>
