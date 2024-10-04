@@ -36,18 +36,18 @@ class InstallExtraVocabulariesTask
      */
 
      protected $vocabularies = [
-            [
-                'vocabulary' => [
-                    'o:namespace_uri' => 'http://dbpedia.org/ontology/',
-                    'o:prefix' => 'dbo',
-                    'o:label' => 'DBPedia.org',
-                    'o:comment' => '',
-                ],
-                'strategy' => 'file',
-                'file' => '/var/www/html/dbpedia_full.nt',
-                'format' => 'guess',
-                'preferred_language' => 'en'
-            ],
+            // [
+            //     'vocabulary' => [
+            //         'o:namespace_uri' => 'http://dbpedia.org/ontology/',
+            //         'o:prefix' => 'dbo',
+            //         'o:label' => 'DBPedia.org',
+            //         'o:comment' => '',
+            //     ],
+            //     'strategy' => 'file',
+            //     'file' => '/var/www/html/dbpedia_full.nt',
+            //     'format' => 'guess',
+            //     'preferred_language' => 'en'
+            // ],
             [
                 'vocabulary' => [
                     'o:namespace_uri' => 'http://schema.org/',
@@ -56,7 +56,7 @@ class InstallExtraVocabulariesTask
                     'o:comment' => '',
                 ],
                 'strategy' => 'file',
-                'file' => '/var/www/html/schemaorg_full.rdf',
+                'file' => '/var/www/html/schemaorg.rdf',
                 'format' => 'guess',
                 'preferred_language' => 'en'
             ],
