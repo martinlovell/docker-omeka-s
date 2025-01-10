@@ -1,4 +1,4 @@
-FROM php:8.2-apache
+FROM php:8.0-apache
 
 RUN apt-get update && apt-get install -y \
         git \
@@ -17,30 +17,30 @@ RUN apt-get update && apt-get install -y \
     && cp $PHP_INI_DIR/php.ini-production $PHP_INI_DIR/php.ini \
     && a2enmod rewrite \
     && curl -sSL https://deb.nodesource.com/gpgkey/nodesource.gpg.key | apt-key add - \
-    && echo "deb https://deb.nodesource.com/node_14.x buster main" > /etc/apt/sources.list.d/nodesource.list \
-    && apt-get update && apt-get install -y nodejs npm \
+    && echo "deb https://deb.nodesource.com/node_10.x buster main" > /etc/apt/sources.list.d/nodesource.list \
+    && apt-get update && apt-get install -y npm \
     && rm -rf /var/lib/apt/lists/* \
     && npm install -g gulp-cli \
     && adduser --disabled-password --gecos '' omeka-s
 
-RUN git clone --depth 1 --branch v4.1.1 https://github.com/omeka/omeka-s.git . \
+RUN git clone --depth 1 --branch v3.2.3 https://github.com/omeka/omeka-s.git . \
     && npm install \
     && gulp init \
     && rm -f config/database.ini \
     && chown -R omeka-s:omeka-s .
 
-RUN wget https://github.com/omeka-s-modules/Mapping/releases/download/v2.0.0/Mapping-2.0.0.zip \
-    && unzip Mapping-2.0.0.zip -d /var/www/html/modules \
-    && rm Mapping-2.0.0.zip
+RUN wget https://github.com/omeka-s-modules/Mapping/releases/download/v1.6.0/Mapping-1.6.0.zip \
+    && unzip Mapping-1.6.0.zip -d /var/www/html/modules \
+    && rm Mapping-1.6.0.zip
 
-RUN wget https://github.com/Daniel-KM/Omeka-S-module-Common/releases/download/3.4.62/Common-3.4.62.zip \
-    && unzip Common-3.4.62.zip -d /var/www/html/modules \
-    && rm Common-3.4.62.zip
+RUN wget https://github.com/omeka-s-modules/FacetedBrowse/releases/download/v1.2.0/FacetedBrowse-1.2.0.zip \
+    && unzip FacetedBrowse-1.2.0.zip -d /var/www/html/modules \
+    && rm FacetedBrowse-1.2.0.zip
 
-RUN wget https://github.com/Daniel-KM/Omeka-S-module-AdvancedSearch/releases/download/3.4.31/AdvancedSearch-3.4.31.zip \
-    && unzip AdvancedSearch-3.4.31.zip -d /var/www/html/modules \
-    && rm AdvancedSearch-3.4.31.zip
 
+RUN wget https://github.com/omeka-s-modules/MetadataBrowse/releases/download/v1.5.1/MetadataBrowse-1.5.1.zip \
+    && unzip MetadataBrowse-1.5.1.zip -d /var/www/html/modules \
+    && rm MetadataBrowse-1.5.1.zip
 
 
 RUN echo 'SetEnv APPLICATION_ENV "development"' >> /var/www/html/.htaccess
